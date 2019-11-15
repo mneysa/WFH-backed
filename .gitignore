@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage
+
+# Transpiled files
+# build/
+
+# VS Code
+.vscode
+!.vscode/tasks.js
+
+# JetBrains IDEs
+.idea/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Misc
+.DS_Store
+dist/
+
+# environment
+.env
+
+src/config/private-keys/
+
+# environments
+src/config/environments/development.ts
+src/config/environments/test.ts
+src/config/environments/production.ts
+
+package-lock.json
+

@@ -1,0 +1,44 @@
+{
+  "name": "1-sequelize-typescript-migrations-example",
+  "version": "1.0.0",
+  "description": "Example how to use migrations in sequelize in typescript",
+  "main": "server.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && node_modules/typescript/bin/tsc",
+    "migrate": "npm run build && node_modules/.bin/sequelize db:migrate --env development",
+    "migrate:undo": "npm run build && node_modules/.bin/sequelize db:migrate:undo --env development",
+    "migrate:undo:all": "npm run build && node_modules/.bin/sequelize db:migrate:undo:all --env development"
+  },
+  "keywords": [
+    "sequelize",
+    "nodejs",
+    "migrations",
+    "typescript"
+  ],
+  "author": {
+    "url": "https://codeburn.io",
+    "name": "Herbert Hart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeburn-io/1-sequelize-typescript-migrations-example.git"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "config": "^3.2.4",
+    "dotenv": "^8.2.0",
+    "pg": "^7.12.1",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "@types/sequelize": "^4.28.6",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  }
+}
