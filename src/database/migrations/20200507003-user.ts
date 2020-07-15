@@ -11,38 +11,27 @@ export async function up(query: QueryInterface) {
         type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
-        comment: 'Id of the instance',
       },
-      displayName: {
+      full_name: {
         type: new DataTypes.STRING(),
         allowNull: false,
-        unique: true,
-        comment: 'Unique display name of the user',
       },
-      firstName: {
-        type: new DataTypes.STRING(255),
-        allowNull: true,
-        comment: 'First name of the user',
+      email: {
+        type: new DataTypes.STRING(),
+        allowNull: false,
+        unique: true
       },
-      lastName: {
-        type: new DataTypes.STRING(255),
-        allowNull: true,
-        comment: 'Last name of the user',
-      },
-      language: {
-        type: new DataTypes.STRING(10),
-        allowNull: true,
-        comment: 'Language of the user',
+      password: {
+        type: new DataTypes.STRING(),
+        allowNull: false
       },
       createdAt: {
         type: DataTypes.DATE,
         allowNull: false,
-        comment: 'Date of creation',
       },
       updatedAt: {
         type: DataTypes.DATE,
         allowNull: false,
-        comment: 'Date of the last update',
       },
       deletedAt: DataTypes.DATE,
     });

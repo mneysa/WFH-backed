@@ -6,6 +6,10 @@ import { BaseModel } from './base';
 // region exporting all models from nested folders
 
 export { User, IUser } from './user.model';
+export { Cafe, ICafe } from './cafe.model';
+export { FoodRange, IFoodRange } from './food_range.model';
+export { DrinkRange, IDrinkRange } from './drink_range.model';
+export { Review, IReview } from './review.model';
 
 // endregion
 

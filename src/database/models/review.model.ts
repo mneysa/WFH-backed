@@ -2,25 +2,28 @@ import { DataTypes, FindOptions, Model, ModelCtor, Sequelize } from 'sequelize';
 import { BaseModel } from './base';
 
 // defining properties for our User model
-export interface IUser {
+export interface IReview {
   id?: string;
-  full_name?: string;
-  email?: string;
-  password?: string;
+  user_id?: string; 
+  cafe_id?: string;
+  rating?: number; 
+  review?: string;
   createdAt?: Date;
   updatedAt?: Date;
+
 }
 
-export class User extends BaseModel implements IUser {
-  public static readonly ModelName: string = 'User';
-  public static readonly ModelNamePlural: string = 'Users';
-  public static readonly TableName: string = 'Users';
+export class Review extends BaseModel implements IReview {
+  public static readonly ModelName: string = 'Review';
+  public static readonly ModelNamePlural: string = 'Reviews';
+  public static readonly TableName: string = 'Reviews';
   public static readonly DefaultScope: FindOptions = {};
 
   public id!: string;
-  public full_name!: string;
-  public email!: string;
-  public password!: string;
+  public user_id: string; 
+  public cafe_id: string; 
+  public rating: number; 
+  public review: string; 
   public createdAt: Date;
   public updatedAt: Date;
 
@@ -33,9 +36,14 @@ export class User extends BaseModel implements IUser {
           primaryKey: true,
           defaultValue: DataTypes.UUIDV4,
         },
-        full_name: new DataTypes.STRING(255),
-        email: new DataTypes.STRING(),
-        password: new DataTypes.STRING(),
+        user_id: {
+            type: DataTypes.UUID,
+        },
+        cafe_id: {
+            type: DataTypes.UUID,
+        },
+        rating: new DataTypes.INTEGER,
+        review: new DataTypes.TEXT
       },
       {
         sequelize: sequelize,

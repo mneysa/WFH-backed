@@ -8,7 +8,9 @@
     "build": "npm run clean && node_modules/typescript/bin/tsc",
     "migrate": "npm run build && node_modules/.bin/sequelize db:migrate --env development",
     "migrate:undo": "npm run build && node_modules/.bin/sequelize db:migrate:undo --env development",
-    "migrate:undo:all": "npm run build && node_modules/.bin/sequelize db:migrate:undo:all --env development"
+    "migrate:undo:all": "npm run build && node_modules/.bin/sequelize db:migrate:undo:all --env development",
+    "seed": "npm run build && node_modules/.bin/sequelize db:seed:all --env development",
+    "seed:undo:all": "npm run build && node_modules/.bin/sequelize db:seed:undo:all --env development"
   },
   "keywords": [
     "sequelize",
@@ -34,7 +36,9 @@
     "dotenv": "^8.2.0",
     "pg": "^7.12.1",
     "sequelize": "^5.21.2",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "^5.5.1",
+    "uuid": "^8.2.0",
+    "vercel": "^19.1.2"
   },
   "devDependencies": {
     "@types/sequelize": "^4.28.6",

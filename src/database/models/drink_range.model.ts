@@ -2,25 +2,23 @@ import { DataTypes, FindOptions, Model, ModelCtor, Sequelize } from 'sequelize';
 import { BaseModel } from './base';
 
 // defining properties for our User model
-export interface IUser {
+export interface IDrinkRange {
   id?: string;
-  full_name?: string;
-  email?: string;
-  password?: string;
+  min_range?:number;
+  max_range?:number;
   createdAt?: Date;
   updatedAt?: Date;
 }
 
-export class User extends BaseModel implements IUser {
-  public static readonly ModelName: string = 'User';
-  public static readonly ModelNamePlural: string = 'Users';
-  public static readonly TableName: string = 'Users';
+export class DrinkRange extends BaseModel implements IDrinkRange {
+  public static readonly ModelName: string = 'DrinkRange';
+  public static readonly ModelNamePlural: string = 'DrinkRanges';
+  public static readonly TableName: string = 'drink_range';
   public static readonly DefaultScope: FindOptions = {};
 
   public id!: string;
-  public full_name!: string;
-  public email!: string;
-  public password!: string;
+  public min_range:number;
+  public max_range:number;
   public createdAt: Date;
   public updatedAt: Date;
 
@@ -29,14 +27,12 @@ export class User extends BaseModel implements IUser {
     this.init(
       {
         id: {
-          type: DataTypes.UUID,
+          type: DataTypes.INTEGER,
           primaryKey: true,
-          defaultValue: DataTypes.UUIDV4,
         },
-        full_name: new DataTypes.STRING(255),
-        email: new DataTypes.STRING(),
-        password: new DataTypes.STRING(),
-      },
+        min_range: new DataTypes.MEDIUMINT,
+        max_range: new DataTypes.MEDIUMINT 
+    },
       {
         sequelize: sequelize,
         tableName: this.TableName,
