@@ -35,9 +35,10 @@ dist/
 src/config/private-keys/
 
 # environments
-src/config/environments/development.ts
 src/config/environments/test.ts
 src/config/environments/production.ts
 
 package-lock.json
+
+
 
