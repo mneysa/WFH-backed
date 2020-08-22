@@ -10,7 +10,9 @@
     "migrate:undo": "npm run build && node_modules/.bin/sequelize db:migrate:undo --env development",
     "migrate:undo:all": "npm run build && node_modules/.bin/sequelize db:migrate:undo:all --env development",
     "seed": "npm run build && node_modules/.bin/sequelize db:seed:all --env development",
-    "seed:undo:all": "npm run build && node_modules/.bin/sequelize db:seed:undo:all --env development"
+    "seed:undo:all": "npm run build && node_modules/.bin/sequelize db:seed:undo:all --env development",
+    "vercel:deploy": "vercel deploy",
+    "vercel:start": "vercel dev"
   },
   "keywords": [
     "sequelize",
@@ -24,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeburn-io/1-sequelize-typescript-migrations-example.git"
+    "url": "npm"
   },
   "engineStrict": true,
   "engines": {

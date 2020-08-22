@@ -33,7 +33,7 @@ export interface ICafe {
   export class Cafe extends BaseModel implements ICafe {
     public static readonly ModelName: string = 'Cafe';
     public static readonly ModelNamePlural: string = 'Cafes';
-    public static readonly TableName: string = 'Cafes';
+    public static readonly TableName: string = 'cafes';
     public static readonly DefaultScope: FindOptions = {};
   
     public id!: string;
@@ -99,6 +99,7 @@ export interface ICafe {
             singular: this.ModelName,
             plural: this.ModelNamePlural,
           },
+          modelName: this.ModelName,
           defaultScope: this.DefaultScope,
         },
       );
@@ -109,12 +110,6 @@ export interface ICafe {
     }) {
       // place to set model associations
     }
-  
-    // endregion
-  
-    // region Instance Model methods
-  
-    // endregion
   }
   
   

@@ -35,10 +35,12 @@ dist/
 src/config/private-keys/
 
 # environments
-src/config/environments/test.ts
+src/config/environments/test.tsgit ad
 src/config/environments/production.ts
 
 package-lock.json
 
 
 
+
+.vercel

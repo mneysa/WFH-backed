@@ -13,11 +13,11 @@ export default {
     },
   },
   database: {
-    host: process.env['DATABASE_HOST'],
+    host: 'workfromhere-prod.cdk141x56vca.ap-southeast-1.rds.amazonaws.com',
     port: 5432, // default postgres port
-    username: process.env['DATABASE_USERNAME'], // default postgres user
-    password: process.env['DATABASE_PASSWORD'], // default user has no password (default)
-    database: process.env['DATABASE_NAME'],
+    username: 'wfh_admin', // default postgres user
+    password: 'QItoGu6mRrMR7JfrPSe4', // default user has no password (default)
+    database: 'workfromhere_prod',
 
     dialect: 'postgres',
     logging: true, // logging can be enabled via console.log

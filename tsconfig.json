@@ -20,6 +20,6 @@
     "outDir": "dist",
     "experimentalDecorators": true
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "src/config/sequelize.config.js"],
   "exclude": ["**/*spec.ts", "node_modules"]
 }

@@ -23,7 +23,7 @@ export async function up(query: QueryInterface) {
                 coffee_availability: true, 
                 tea_availability: true, 
                 food_availability: true, 
-                vegan_friendly: true, 
+                vegan_availability: true, 
                 pet_friendly: true, 
                 staff_friendliness: 4, 
                 space_option: "Open Area",
@@ -49,12 +49,12 @@ export async function up(query: QueryInterface) {
                 coffee_availability: true, 
                 tea_availability: true, 
                 food_availability: true, 
-                vegan_friendly: true, 
+                vegan_availability: true, 
                 pet_friendly: true, 
                 staff_friendliness: 4, 
                 space_option: "Open Area",
                 space_size: "20-30",
-                createdAt: new Date(),   
+                createdAt: new Date(), 
                 updatedAt: new Date()       
 
             }

@@ -15,7 +15,7 @@ export async function up(query: QueryInterface) {
       user_id: {
           type: DataTypes.UUID,
           references:{
-            model: 'Users',
+            model: 'users',
             key: 'id'
         }
       },
@@ -87,7 +87,7 @@ export async function up(query: QueryInterface) {
           type: DataTypes.BOOLEAN,
           allowNull: false
       },
-      vegan_friendly: {
+      vegan_availability: {
         type: DataTypes.BOOLEAN,
         allowNull: false
       },   

@@ -8,11 +8,12 @@ class Database {
   public readonly modelCtors = modelsLoader();
   private readonly _sequelize: Sequelize = null;
   constructor() {
-    // get database config
-    const databaseConfig = SERVER_CONFIG.getTyped('database');
-
-    this._sequelize = new Sequelize(databaseConfig);
-
+    
+    this._sequelize = new Sequelize(process.env.DATABASE_NAME,process.env.DATABASE_USERNAME,process.env.DATABASE_PASSWORD,
+      {
+        'host': process.env.DATABASE_HOST,
+        'dialect': 'postgres'
+      });
     // init every model
     Object.keys(this.modelCtors).forEach(modelName => {
       this.modelCtors[modelName].prepareInit(this._sequelize);
@@ -22,7 +23,6 @@ class Database {
     Object.keys(this.modelCtors).forEach(modelName => {
       this.modelCtors[modelName].setAssociations(this.modelCtors);
     });
-
   }
 
   /**

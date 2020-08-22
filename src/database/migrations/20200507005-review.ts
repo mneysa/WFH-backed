@@ -15,7 +15,7 @@ export async function up(query: QueryInterface) {
       user_id: {
           type: DataTypes.UUID,
           references:{
-            model: 'Users',
+            model: 'users',
             key: 'id'
           },
           allowNull: false
@@ -23,7 +23,7 @@ export async function up(query: QueryInterface) {
       cafe_id: {
           type: DataTypes.INTEGER,
           references:{
-            model: 'Cafes',
+            model: 'cafes',
             key: 'id'
         },
         allowNull: false

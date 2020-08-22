@@ -20,7 +20,7 @@ export { Review, IReview } from './review.model';
  * */
 export const modelsLoader = () => {
   const array = getFilesRecursively(__dirname)
-    .filter(fileName => fileName.endsWith('model.js'))
+    .filter(fileName => fileName.endsWith('model.ts'))
     .map(fileName => {
       // tslint:disable-next-line:non-literal-require
       const modelClass = require(fileName);

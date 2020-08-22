@@ -14,7 +14,7 @@ export interface IUser {
 export class User extends BaseModel implements IUser {
   public static readonly ModelName: string = 'User';
   public static readonly ModelNamePlural: string = 'Users';
-  public static readonly TableName: string = 'Users';
+  public static readonly TableName: string = 'users';
   public static readonly DefaultScope: FindOptions = {};
 
   public id!: string;

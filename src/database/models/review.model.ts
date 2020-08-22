@@ -16,7 +16,7 @@ export interface IReview {
 export class Review extends BaseModel implements IReview {
   public static readonly ModelName: string = 'Review';
   public static readonly ModelNamePlural: string = 'Reviews';
-  public static readonly TableName: string = 'Reviews';
+  public static readonly TableName: string = 'reviews';
   public static readonly DefaultScope: FindOptions = {};
 
   public id!: string;
